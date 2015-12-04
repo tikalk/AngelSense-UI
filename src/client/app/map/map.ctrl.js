@@ -32,7 +32,7 @@ function MapCtrl (attacks, MapRenderer) {
     }
 
     function saveMap (map) {
-      
+      MapRenderer.renderRoute('Halifax, NS', 'Seattle, WA');
     }
 }
 })();

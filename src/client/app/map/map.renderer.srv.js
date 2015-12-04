@@ -11,7 +11,7 @@
     	var directionsService = {};
     	var directionsDisplay = {};
         var service = {
-            calculateAndDisplayRoute: calculateAndDisplayRoute,
+            renderRoute: renderRoute,
             setMap: setMap,
             map: map
         };
@@ -25,7 +25,7 @@
 
         // copied from 
         // https://developers.google.com/maps/documentation/javascript/examples/directions-waypoints
-        function calculateAndDisplayRoute(start, end /*directionsService, directionsDisplay*/) {
+        function renderRoute(start, end /*directionsService, directionsDisplay*/) {
         	var waypts = [];
         	// var checkboxArray = document.getElementById('waypoints');
         	// for (var i = 0; i < checkboxArray.length; i++) {
