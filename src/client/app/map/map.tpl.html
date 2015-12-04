@@ -1,0 +1,17 @@
+<div class="col-lg-12 map">
+    <div id="map" google-maps config="vm.mapProps" map="vm.map" on-ready="vm.saveMap(map)"></div>
+    <!-- <openlayers
+        ol-defaults="vm.mapProps.defaults"
+        ol-center="vm.currentAttack"
+        height="480px"
+        width="100%">
+            <ol-marker 
+                ng-repeat="marker in vm.markers" 
+                lon="marker.lon"
+                lat="marker.lat"
+                name="{{marker.name}}"
+                message="{{marker.name}}"
+                >
+            </ol-marker>
+    </openlayers> -->
+</div>

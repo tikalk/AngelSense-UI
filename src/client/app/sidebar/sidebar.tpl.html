@@ -1,0 +1,22 @@
+<div class="navbar-default sidebar" role="navigation">
+      <div class="sidebar-nav navbar-collapse collapse">
+          <ul class="nav" id="side-menu">
+              <li class="sidebar-search">
+                  <div class="input-group custom-search-form">
+                      <input type="text" class="form-control" placeholder="Search..." ng-model="vm.screen">
+                      <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">
+                          <i class="fa fa-search"></i>
+                      </button>
+                  </span>
+                  </div>
+                  <!-- /input-group -->
+              </li>
+              <li ng-repeat="item in vm.items | filter:vm.screen">
+                  <a ui-sref="{{item.sref}}"><i class="fa {{item.icon}}"></i> {{item.label}}</a>
+              </li>
+          </ul>
+          </div>
+      </div>
+      <!-- /.sidebar-collapse -->
+  </div>

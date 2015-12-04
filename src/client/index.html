@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html ng-app="ki">
+<head>
+  <meta charset="UTF-8">
+  <title>Thor's MjoLnir</title>
+
+  <link rel="stylesheet" href="bower_components/openlayers3/build/ol.css">
+  <link rel="stylesheet" href="bower_components/angular-openlayers-directive/dist/angular-openlayers-directive.css">
+  <link rel="stylesheet" href="app.css">
+  <link href='http://fonts.googleapis.com/css?family=IM+Fell+Great+Primer|Devonshire' rel='stylesheet' type='text/css'>
+
+  <!-- Disable browser cache -->
+  <meta http-equiv="cache-control" content="max-age=0" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+  <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+  <meta http-equiv="pragma" content="no-cache" />
+
+</head>
+<body>
+    <div id="wrapper">
+    <!-- Navigation -->
+            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <i class="fa fa-wrench"></i> AngelSense
+                    </a>
+                </div>
+                <!-- /.navbar-header -->
+
+                <ul class="nav navbar-top-links navbar-right" ng-controller="NavbarCtrl as vm">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+                          title="{{ vm.isOn() ? '': 'Not'}} Watching on the server">
+                            <i class="fa {{ vm.isOn() ? 'fa-wifi' : 'fa-circle-o-notch' }} fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-messages">
+                            <li>
+                                <a ng-click="vm.pause()" ng-show="vm.isOn()">
+                                    <div>
+                                        <strong>Pause</strong>
+                                        <span class="pull-right text-muted">
+                                            <em>Now</em>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a ng-click="vm.resume()" ng-hide="vm.isOn()">
+                                    <div>
+                                        <strong>Resume</strong>
+                                        <span class="pull-right text-muted">
+                                            <em>Now</em>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-messages -->
+                    </li>
+                </ul>
+                <!-- /.navbar-top-links -->
+
+                <!-- Sidebar UI-VIEW-->
+               <div ng-include="'app/sidebar/sidebar.tpl.html'" ng-controller="SidebarCtrl as vm"></div>
+                <!-- /.navbar-static-side -->
+            </nav>
+
+            <div id="page-wrapper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header"><i class="fa fa-dashboard fa-fw"></i>Dashboard</h1>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    <div ui-view></div>
+                </div>
+                
+<!--                 <div class="row" ng-controller="AdminCtrl as vm">
+                    <stat ng-repeat="(stat, value) in vm.machine"
+                        model="value"
+                        key="stat"
+                        status="primary">
+                    </stat>
+                </div> -->
+                <!-- /.row -->
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <h1><i class="fa fa-list fa-fw"></i>Schedule</h1>
+                        <!-- ATTACKS -->
+                        <attacks-list></attacks-list>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- /#page-wrapper -->
+
+        </div>
+        <!-- /#wrapper -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCz-geHRlj93HbTBGaBHliwIVvFIKa8EA&signed_in=true"></script>
+   <!-- build:js vendors.js -->
+   <!-- The scripts between the 'build:js' tags are compiled to vendors.js during concat -->
+   <!-- SCRIPTS -->
+   <!--
+   <script src="bower_components/jquery/dist/jquery.min.js"></script>
+   <script src="bower_components/angular/angular.js"></script>
+   <script src="bower_components/jqueryui/jquery-ui.min.js"></script>
+   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+   <script src="bower_components/openlayers3/build/ol.js"></script>
+   -->
+
+   <!-- 3RD PARTY -->
+   <!--
+   <script src="bower_components/a0-angular-storage/dist/angular-storage.min.js"></script>
+   <script src="bower_components/angular-jwt/dist/angular-jwt.min.js"></script>
+   <script src="bower_components/angular-http-auth/src/http-auth-interceptor.js"></script>
+   <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+   <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+   <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+   <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+   <script src="bower_components/ng-file-upload/angular-file-upload.min.js"></script>
+   <script src="bower_components/angular-ui-grid/ui-grid.min.js"></script>
+   <script src="bower_components/angular-dragdrop/src/angular-dragdrop.min.js"></script>
+   <script src="bower_components/angular-ui-select/dist/select.min.js"></script>
+   <script src="bower_components/moment/min/moment.min.js"></script>
+   <script src="bower_components/angular-ui-sortable/sortable.min.js"></script>
+   <script src="bower_components/angular-openlayers-directive/dist/angular-openlayers-directive.min.js"></script>
+   -->
+   <!-- endbuild -->
+
+   <!-- MAIN APP -->
+   <!--
+      in dist task, the script tag of "bundle.js" is removed
+      and the line below, is replaced with a bundle-GITHASH script tag
+    -->
+    <!-- inject:js -->
+    <script src="vendors.js"></script>
+    <script src="bundle.js"></script>
+    <script src="templates.mdl.js"></script>
+    <!-- endinject -->
+
+</body>
+</html>

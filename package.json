@@ -1,0 +1,74 @@
+{
+  "name": "angular-fullstack-gulp",
+  "version": "0.0.1",
+  "author": [
+    "Oren Farhi"
+  ],
+  "description": "Boilerplate for javascript fullstack with: expressjs, angularjs and gulp and gulp-dogen (based on angular fullstack and many other goodies).",
+  "contributors": [
+    {
+      "name": "Oren Farhi"
+    }
+  ],
+  "scripts": {
+    "start": "gulp serve"
+  },
+  "dependencies": {
+    "gulp-shell": "^0.2.10",
+    "lodash": "~2.4.1"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "del": "*",
+    "git-rev": "^0.2.1",
+    "gulp": "*",
+    "gulp-bower": "*",
+    "gulp-concat": "^2.6.0",
+    "gulp-concat-sourcemap": "*",
+    "gulp-copy": "0.0.2",
+    "gulp-dogen": "^0.1.1",
+    "gulp-gitshasuffix": "*",
+    "gulp-include-source": "0.0.5",
+    "gulp-inject": "^1.0.2",
+    "gulp-insert": "^0.4.0",
+    "gulp-jshint": "*",
+    "gulp-less": "*",
+    "gulp-livereload": "*",
+    "gulp-minify-html": "^0.1.7",
+    "gulp-mocha": "*",
+    "gulp-ng-html2js": "^0.1.8",
+    "gulp-nodemon": "*",
+    "gulp-plumber": "*",
+    "gulp-protractor": "0.0.11",
+    "gulp-rename": "^1.2.0",
+    "gulp-replace": "^0.5.0",
+    "gulp-rimraf": "*",
+    "gulp-shell": "^0.2.10",
+    "gulp-sourcemaps": "~1.1.1",
+    "gulp-useref": "^1.0.2",
+    "gulp-util": "*",
+    "gulp-webserver": "^0.9.1",
+    "gulp-zip": "*",
+    "gulp.spritesmith": "^2.0.1",
+    "jasmine-reporters": "^1.0.1",
+    "karma": "^0.12.23",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-html2js-preprocessor": "^0.1.0",
+    "karma-jasmine": "^0.2.0",
+    "karma-json-fixtures-preprocessor": "0.0.1",
+    "karma-mocha-reporter": "^0.3.1",
+    "karma-ng-html2js-preprocessor": "^0.1.0",
+    "karma-ng-json2js-preprocessor": "^1.0.0",
+    "karma-ng-scenario": "*",
+    "karma-phantomjs-launcher": "~0.1.4",
+    "karma-teamcity-reporter": "^0.1.2",
+    "mocha-teamcity-reporter": "*",
+    "run-sequence": "*",
+    "spritesmith": "^1.0.3",
+    "yargs": "^1.3.3"
+  },
+  "bundledDependencies": [],
+  "engines": {
+    "node": "0.10.x"
+  }
+}
