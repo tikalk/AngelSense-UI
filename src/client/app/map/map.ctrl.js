@@ -32,7 +32,11 @@ function MapCtrl (attacks, MapRenderer) {
     }
 
     function saveMap (map) {
-      MapRenderer.renderRoute('Halifax, NS', 'Seattle, WA');
+      // arguments can be coordinates instead of strings
+      // pointsInTheWay are points that should be rendered as pins
+      // between start and end
+      var pointsInTheWay = [];
+      MapRenderer.renderRoute('Halifax, NS', 'Seattle, WA', pointsInTheWay);
     }
 }
 })();

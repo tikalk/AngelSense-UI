@@ -25,8 +25,11 @@
 
         // copied from 
         // https://developers.google.com/maps/documentation/javascript/examples/directions-waypoints
-        function renderRoute(start, end /*directionsService, directionsDisplay*/) {
-        	var waypts = [];
+        // start, end can be lat and lon coordinates, i.e: 30.4124123213, 39.4234124
+        // pointsInTheWay are points that should be rendered as pins
+	    // between start and end
+        function renderRoute(start, end, pointsInTheWay /*directionsService, directionsDisplay*/) {
+        	var waypts = pointsInTheWay ? pointsInTheWay : [];
         	// var checkboxArray = document.getElementById('waypoints');
         	// for (var i = 0; i < checkboxArray.length; i++) {
         	// 	if (checkboxArray.options[i].selected) {
